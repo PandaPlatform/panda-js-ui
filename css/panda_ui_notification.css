@@ -1,0 +1,112 @@
+.uiNotification {
+  /* Info Style */
+  /* Success Style */
+  /* Warning Style */
+  /* Error Style */ }
+  .uiNotification {
+    width: auto;
+    overflow: hidden;
+    color: #545454;
+    background-color: #fff;
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; }
+  .uiNotification .uiNtfHead {
+    text-align: left;
+    padding: 6px 10px;
+    position: relative;
+    text-transform: capitalize;
+    margin: 5px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    color: #fff; }
+  .uiNotification .closeBtn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    display: none;
+    background: url("/assets/images/icons/closeX.svg") no-repeat;
+    background-size: cover; }
+  .uiNotification:hover .closeBtn {
+    cursor: pointer;
+    display: block;
+    opacity: 1 !important; }
+  .uiNotification .uiNtfBody {
+    overflow: auto;
+    padding: 10px 5px; }
+  .uiNotification .uiNtfBody .uiNtfIcon {
+    display: block;
+    float: left;
+    width: 19px;
+    height: 19px;
+    margin-right: 8px;
+    background: url("/assets/images/icons/notification_icons.svg") no-repeat;
+    background-size: cover; }
+  .uiNotification .uiNtfBody h2 {
+    font-size: 12px;
+    margin: 2px 0 2px 27px; }
+  .uiNotification .uiNtfBody p {
+    margin: 0;
+    clear: both;
+    padding: 5px 5px;
+    text-indent: 10px; }
+  .uiNotification .uiNtfBody .customMessage {
+    margin-top: 5px; }
+  .uiNotification .uiNtfBody .notes {
+    margin-top: 10px;
+    font-size: 9px; }
+  .uiNotification.info {
+    background-color: #b6dcf5;
+    border-color: #0f4976; }
+  .uiNotification.info .uiNtfHead {
+    background-color: #1f77bd;
+    box-shadow: 2px 2px 0 #0f4976; }
+  .uiNotification.info .uiNtfBody .uiNtfIcon {
+    background-position: 0px -38px; }
+  .uiNotification.info .uiNtfBody h2 {
+    color: #0f4976; }
+  .uiNotification.info .uiNtfBody .customMessage {
+    color: #0f4976; }
+  .uiNotification.success {
+    background-color: #cce7c7;
+    border-color: #236f3a; }
+  .uiNotification.success .uiNtfHead {
+    background-color: #3eac47;
+    box-shadow: 2px 2px 0 #236f3a; }
+  .uiNotification.success .uiNtfBody .uiNtfIcon {
+    background-position: 0 0; }
+  .uiNotification.success .uiNtfBody h2 {
+    color: #3eac47; }
+  .uiNotification.success .uiNtfBody .customMessage {
+    color: #3eac47; }
+  .uiNotification.warning {
+    background-color: #f6d1a3;
+    border-color: #e8732a; }
+  .uiNotification.warning .uiNtfHead {
+    background-color: #f79420;
+    box-shadow: 2px 2px 0 #e8732a; }
+  .uiNotification.warning .uiNtfBody .uiNtfIcon {
+    background-position: 0px -57px; }
+  .uiNotification.warning .uiNtfBody h2 {
+    color: #e8732a; }
+  .uiNotification.warning .uiNtfBody .customMessage {
+    color: #e8732a; }
+  .uiNotification.error {
+    background-color: #f8b5bd;
+    border-color: #76121b; }
+  .uiNotification.error .uiNtfHead {
+    background-color: #be1e2d;
+    box-shadow: 2px 2px 0 #76121b; }
+  .uiNotification.error .uiNtfBody .uiNtfIcon {
+    background-position: 0px -19px; }
+  .uiNotification.error .uiNtfBody h2 {
+    color: #76121b; }
+  .uiNotification.error .uiNtfBody .customMessage {
+    color: #76121b; }
+
+/*# sourceMappingURL=panda_ui_notification.css.map */

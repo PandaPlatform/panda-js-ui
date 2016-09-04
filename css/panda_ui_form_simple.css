@@ -1,0 +1,62 @@
+form.form-template.form-simple .form-simple-row {
+  position: relative;
+  margin: auto;
+  clear: both;
+  padding: 5px 0;
+  vertical-align: middle;
+  overflow: auto; }
+form.form-template.form-simple .form-simple-row input {
+  width: 200px;
+  float: left; }
+form.form-template.form-simple .form-simple-row textarea {
+  width: 200px;
+  max-width: 50%;
+  float: left; }
+form.form-template.form-simple .form-simple-row select {
+  width: 200px;
+  border: 1px solid #777;
+  padding: 3px;
+  margin: 0;
+  float: left; }
+form.form-template.form-simple .form-simple-label {
+  float: left;
+  padding: 3px 0;
+  width: 200px;
+  text-align: right;
+  margin-right: 5px;
+  cursor: pointer; }
+form.form-template.form-simple .form-simple-notes {
+  display: block;
+  clear: both;
+  margin-left: 200px;
+  font-style: italic;
+  color: #777;
+  max-width: 500px; }
+form.form-template.form-simple .form-simple-required-notes {
+  clear: both;
+  color: #777;
+  font-style: italic;
+  padding: 5px 0;
+  text-indent: 10px; }
+form.form-template.form-simple span.required {
+  color: #c00403; }
+form.form-template.form-simple .form-controls {
+  overflow: auto; }
+form.form-template.form-simple .form-controls:empty {
+  margin: 0;
+  padding: 0;
+  display: none; }
+form.form-template.form-simple .form-controls .form-simple-row {
+  padding-left: 200px; }
+
+@media screen and (max-width: 500px) {
+  form.form-template.form-simple .form-simple-row textarea,
+  form.form-template.form-simple .form-simple-row select,
+  form.form-template.form-simple .form-simple-label {
+    width: 100px; }
+  form.form-template.form-simple .form-simple-notes {
+    margin-left: 100px; }
+  form.form-template.form-simple .form-controls .form-simple-row {
+    padding-left: 100px; } }
+
+/*# sourceMappingURL=panda_ui_form_simple.css.map */

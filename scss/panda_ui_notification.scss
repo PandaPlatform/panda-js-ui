@@ -1,0 +1,159 @@
+.uiNotification {
+    & {
+        width: auto;
+        overflow: hidden;
+        color: #545454;
+        background-color: #fff;
+        border: 1px solid rgba(166, 166, 166, 1);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+    }
+    .uiNtfHead {
+        text-align: left;
+        padding: 6px 10px;
+        position: relative;
+        text-transform: capitalize;
+        margin: 5px;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        color: #fff;
+    }
+    .closeBtn {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        display: none;
+        background: url('/assets/images/icons/closeX.svg') no-repeat;
+        background-size: cover;
+    }
+    &:hover .closeBtn {
+        cursor: pointer;
+        display: block;
+        opacity: 1 !important;
+    }
+    .uiNtfBody {
+        & {
+            overflow: auto;
+            padding: 10px 5px;
+        }
+        .uiNtfIcon {
+            display: block;
+            float: left;
+            width: 19px;
+            height: 19px;
+            margin-right: 8px;
+            background: url('/assets/images/icons/notification_icons.svg') no-repeat;
+            background-size: cover;
+        }
+        h2 {
+            font-size: 12px;
+            margin: 2px 0 2px 27px;
+        }
+        p {
+            margin: 0;
+            clear: both;
+            padding: 5px 5px;
+            text-indent: 10px;
+        }
+        .customMessage {
+            margin-top: 5px;
+        }
+        .notes {
+            margin-top: 10px;
+            font-size: 9px
+        }
+    }
+    /* Info Style */
+    &.info {
+        & {
+            background-color: #b6dcf5;
+            border-color: #0f4976;
+        }
+        .uiNtfHead {
+            background-color: #1f77bd;
+            box-shadow: 2px 2px 0 #0f4976;
+        }
+        .uiNtfBody {
+            .uiNtfIcon {
+                background-position: 0px -38px;
+            }
+            h2 {
+                color: #0f4976;
+            }
+            .customMessage {
+                color: #0f4976;
+            }
+        }
+    }
+    /* Success Style */
+    &.success {
+        & {
+            background-color: #cce7c7;
+            border-color: #236f3a;
+        }
+        .uiNtfHead {
+            background-color: #3eac47;
+            box-shadow: 2px 2px 0 #236f3a;
+        }
+        .uiNtfBody {
+            .uiNtfIcon {
+                background-position: 0 0;
+            }
+            h2 {
+                color: #3eac47;
+            }
+            .customMessage {
+                color: #3eac47;
+            }
+        }
+    }
+    /* Warning Style */
+    &.warning {
+        & {
+            background-color: #f6d1a3;
+            border-color: #e8732a;
+        }
+        .uiNtfHead {
+            background-color: #f79420;
+            box-shadow: 2px 2px 0 #e8732a;
+        }
+        .uiNtfBody {
+            .uiNtfIcon {
+                background-position: 0px -57px;
+            }
+            h2 {
+                color: #e8732a;
+            }
+            .customMessage {
+                color: #e8732a;
+            }
+        }
+    }
+    /* Error Style */
+    &.error {
+        & {
+            background-color: #f8b5bd;
+            border-color: #76121b;
+        }
+        .uiNtfHead {
+            background-color: #be1e2d;
+            box-shadow: 2px 2px 0 #76121b;
+        }
+        .uiNtfBody {
+            .uiNtfIcon {
+                background-position: 0px -19px;
+            }
+            h2 {
+                color: #76121b;
+            }
+            .customMessage {
+                color: #76121b;
+            }
+        }
+    }
+}
