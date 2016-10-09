@@ -28,7 +28,7 @@
         height: 16px;
         text-align: center;
         display: none;
-        background: url('/assets/images/icons/closeX.svg') no-repeat;
+        background: url('../icons/close-x.svg') no-repeat;
         background-size: cover;
     }
     &:hover .closeBtn {
@@ -47,7 +47,7 @@
             width: 19px;
             height: 19px;
             margin-right: 8px;
-            background: url('/assets/images/icons/notification_icons.svg') no-repeat;
+            background: url('../icons/notifications.svg') no-repeat;
             background-size: cover;
         }
         h2 {

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AACI,UAAE;EACE,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,KAAK;EAChB,OAAO,EAAE,GAAG",
-"sources": ["../scss/panda_ui_tooltip.scss"],
+"mappings": "AAAA,UAAW;EACP,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,KAAK;EAChB,OAAO,EAAE,GAAG",
+"sources": ["panda_ui_tooltip.scss"],
 "names": [],
 "file": "panda_ui_tooltip.css"
 }
