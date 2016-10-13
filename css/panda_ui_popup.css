@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 50000;
+  z-index: 1000;
   overflow-y: auto; }
 
 .uiPopup {
@@ -17,21 +17,22 @@
   .uiPopup {
     display: none;
     position: fixed;
-    z-index: 300;
+    z-index: 1200;
     width: auto;
     overflow: visible;
     max-width: 90%;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); }
+    -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out; }
   .uiPopup .popupContent {
     overflow: auto;
     height: 100%; }
   .uiPopup.wbrdr {
     background-color: #fff;
     border: 1px solid #5e6570; }
-  .uiPopup.wbg {
-    z-index: 350; }
   .uiPopup.timeout .actionButton {
     display: block;
     background-image: none; }

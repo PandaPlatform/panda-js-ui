@@ -308,6 +308,11 @@
         if (typeof callback == 'function') {
             callback.call(systemPopup.get(0));
         }
+
+        // Reposition popup
+        systemPopup.on('reposition', function () {
+            repositionPopup(systemPopup);
+        });
     }
 
     // ------------------------ Creation and Removal Functions ------------------------
@@ -385,7 +390,7 @@
         // Check if fade should be used
         if (settings.withFade) {
             // Fade background out and then remove it
-            $(".popupOverlay", extra.parent).fadeOut("slow", function () {
+            $(".popupOverlay", extra.parent).fadeOut(200, function () {
                 $(this).remove();
             });
         } else {
@@ -417,7 +422,7 @@
         // Remove popup -- Remove or detach?
         if (settings.withFade) {
             // Fades popup out and then removes it
-            systemPopup.fadeOut("slow", function () {
+            systemPopup.fadeOut(200, function () {
                 $(this).remove();
             });
         } else {
@@ -448,7 +453,7 @@
         var extra = systemPopup.data("popup-extra");
         // Checks fade
         if (settings.withFade) {
-            $(".popupOverlay", extra.parent).fadeIn("slow");
+            $(".popupOverlay", extra.parent).fadeIn(200);
         } else {
             $(".popupOverlay", extra.parent).css("display", "block");
         }
@@ -460,7 +465,7 @@
         var extra = systemPopup.data("popup-extra");
         // Checks fade
         if (settings.withFade) {
-            systemPopup.fadeIn("slow");
+            systemPopup.fadeIn(200);
         } else {
             systemPopup.css("display", "block");
         }
@@ -1020,8 +1025,9 @@
         if ((inParent && inViewport) || tries > 1) {
             systemPopup.data("popup-extra").calculatedPosition += dock + ":" + (pivotPoint + aliDist);
             stickToSender(systemPopup);
-        } else
+        } else {
             alignVertically(systemPopup, switchMap[position], ++tries);
+        }
     }
 
 })(jQuery);
