@@ -5,12 +5,12 @@ Panda.Ui = Panda.Ui || {};
     Panda.Ui.DOM = {
         create: function (tag, context, id, itemClass) {
             // Create DOMElement object
-            var domElement = $("<" + tag + "/>").html(context);
-            if (id != "") {
-                domElement.attr("id", id);
+            var domElement = $('<' + tag + '/>').html(context);
+            if (id != '') {
+                domElement.attr('id', id);
             }
 
-            if (itemClass != "") {
+            if (itemClass != '') {
                 domElement.addClass(itemClass);
             }
 
