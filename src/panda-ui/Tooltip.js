@@ -1,14 +1,7 @@
-var Panda = Panda || {};
-Panda.Ui = Panda.Ui || {};
-
 (function ($) {
-    // Initialize
-    $(document).one('ready', function () {
-        Panda.Ui.Tooltip.init();
-    });
+    'use strict';
 
-// Create Ui Tooltip Object
-    Panda.Ui.Tooltip = {
+    Panda.Ui.Tooltip = $.extend(Panda.Ui.Tooltip || {}, {
         init: function () {
             $(document).on('click mouseover', '[data-ui-tooltip]', function (ev) {
                 // Display tooltip
@@ -23,5 +16,5 @@ Panda.Ui = Panda.Ui || {};
                 $('.uiTooltip').trigger('dispose');
             });
         }
-    };
+    });
 })(jQuery);

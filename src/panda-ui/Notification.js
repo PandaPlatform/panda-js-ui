@@ -1,23 +1,14 @@
-var Panda = Panda || {};
-Panda.Ui = Panda.Ui || {};
-
 (function ($) {
-    // Initialize
-    $(document).one('ready', function () {
-        // Initialize Notification
-        Panda.Ui.Notification.init();
-    });
+    'use strict';
 
-    Panda.Ui.Notification = {
+    Panda.Ui.Notification = $.extend(Panda.Ui.Notification || {}, {
         init: function () {
             $(document).on('click', '.uiNotification > .uiNtfHead > .closeBtn', function (ev) {
-                // Stops the Bubbling
                 ev.stopPropagation();
-
                 $(this).closest('.uiNotification').remove();
             });
 
-            Panda.Events.on(document, 'panda.content.modified', '', function (ev) {
+            $(document).on('panda.content.modified', function (ev) {
                 // For each timeout notification, set timeout fade out
                 $(document).find('.uiNotification.timeout').each(function () {
                     // Get notification
@@ -35,5 +26,5 @@ Panda.Ui = Panda.Ui || {};
                 });
             });
         }
-    };
+    });
 })(jQuery);

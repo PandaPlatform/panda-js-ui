@@ -1,10 +1,10 @@
-//________________________________________ scrollHere Function Extension of jQuery ________________________________________//
 // args: speed (number|string) - of the animation, focus (boolean) - after animation
 (function ($) {
     var methods = {
         "animate": function (scrollThis, speed) {
-            if ($.type(speed) == "undefined")
+            if ($.type(speed) === "undefined") {
                 speed = 400;
+            }
 
             return this.each(function () {
                 // Calculate pixels to move, in order for this to reach the top of scrollThis
@@ -48,10 +48,10 @@
                 var speed = 400;
                 var f = false;
                 var jqthis = $(this);
-                if (typeof(o) == "boolean") f = o;
-                if (typeof(o) == "string" || typeof(o) == "number") speed = o;
-                if (typeof(t) == "boolean") f = t;
-                if (typeof(t) == "string" || typeof(t) == "number") speed = t;
+                if (typeof(o) === "boolean") f = o;
+                if (typeof(o) === "string" || typeof(o) === "number") speed = o;
+                if (typeof(t) === "boolean") f = t;
+                if (typeof(t) === "string" || typeof(t) === "number") speed = t;
 
                 // Calculate pixels to move, in order for this to reach the top of scrollThis
                 var top = scrollThis.scrollTop() + $(this).offset().top - scrollThis.offset().top;
@@ -71,19 +71,18 @@
         // Closest scrolling element
         var collection = $(this).add($(this).parents());
         var scrollThis = $(collection.get().reverse()).filter(function () {
-            return $(this).height() != this.scrollHeight;
+            return $(this).height() !== this.scrollHeight;
         }).first();
-
-        var scrollThis = (scrollThis.length == 0 ? $(window) : scrollThis );
+        scrollThis = (scrollThis.length === 0 ? $(window) : scrollThis );
 
         // Method calling logic
-        if ($.type(method) == "undefined" || $.type(method) == "null") {
+        if ($.type(method) === "undefined" || $.type(method) === "null") {
             return methods["scroll"].call(this, scrollThis);
-        } else if (arguments.length == 1 && typeof(method) == "boolean") {
+        } else if (arguments.length === 1 && typeof(method) === "boolean") {
             return methods["focus"].apply(this, [scrollThis].concat(Array.prototype.slice.call(arguments, 0)));
-        } else if (arguments.length == 1 && (typeof(method) == "string" || typeof(method) == "number" )) {
+        } else if (arguments.length === 1 && (typeof(method) === "string" || typeof(method) === "number" )) {
             return methods["animate"].apply(this, [scrollThis].concat(Array.prototype.slice.call(arguments, 0)));
-        } else if (arguments.length == 2) {
+        } else if (arguments.length === 2) {
             return methods["anifocus"].apply(this, [scrollThis].concat(Array.prototype.slice.call(arguments, 0)));
         } else {
             $.error('Wrong use of method jQuery.scrollTo...');
@@ -107,7 +106,7 @@
                 jqthis.doTimeout('scrollListUp', interval, function () {
                     var acc = (topPart - ev.pageY) / 4;
                     var speed = 1 + acc;
-                    if (this.scrollTop() == 0) {
+                    if (this.scrollTop() === 0) {
                         return false;
                     } else {
 
@@ -131,8 +130,9 @@
                 }, false);
                 //cancel timeouts + init scrollable area
             } else {
-                if (jqthis.data("scrollArea") !== true && topPart < ev.pageY && ev.pageY < bottomPart)
+                if (jqthis.data("scrollArea") !== true && topPart < ev.pageY && ev.pageY < bottomPart) {
                     jqthis.data("scrollArea", true);
+                }
                 jqthis.doTimeout('scrollListUp');
                 jqthis.doTimeout('scrollListDown');
             }

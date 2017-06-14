@@ -1,20 +1,19 @@
-var Panda = Panda || {};
-Panda.Ui = Panda.Ui || {};
-
 (function ($) {
-    Panda.Ui.DOM = {
+    'use strict';
+
+    Panda.Ui.DOM = $.extend(Panda.Ui.DOM || {}, {
         create: function (tag, context, id, itemClass) {
             // Create DOMElement object
             var domElement = $('<' + tag + '/>').html(context);
-            if (id != '') {
+            if (id !== '') {
                 domElement.attr('id', id);
             }
 
-            if (itemClass != '') {
+            if (itemClass !== '') {
                 domElement.addClass(itemClass);
             }
 
             return domElement;
         }
-    };
+    });
 })(jQuery);

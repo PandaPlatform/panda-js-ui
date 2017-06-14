@@ -1,14 +1,7 @@
-var Panda = Panda || {};
-Panda.Ui = Panda.Ui || {};
-
 (function ($) {
-    // Initialize
-    $(document).one('ready', function () {
-        Panda.Ui.WindowFrame.init();
-    });
+    'use strict';
 
-    // Create Window Frame Prototype Object
-    Panda.Ui.WindowFrame = {
+    Panda.Ui.WindowFrame = $.extend(Panda.Ui.WindowFrame || {}, {
         init: function () {
             // Handles preventDefault action on every weblink with href='' or href='#' or has handler onclick
             $(document).on('click', '.wFrame > .frameHeader > .closeBtn', function (ev) {
@@ -21,5 +14,5 @@ Panda.Ui = Panda.Ui || {};
                 $(this).trigger('dispose');
             });
         }
-    };
+    });
 })(jQuery);

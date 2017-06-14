@@ -1,20 +1,12 @@
-var Panda = Panda || {};
-Panda.Ui = Panda.Ui || {};
-Panda.Ui.Forms = Panda.Ui.Forms || {};
-
 (function ($) {
-    // Initialize
-    $(document).one('ready', function () {
-        // Initialize Switch Button
-        Panda.Ui.Forms.SwitchButtonForm.init();
-    });
+    'use strict';
 
-    Panda.Ui.Forms.SwitchButtonForm = {
+    Panda.Ui.Forms.SwitchButton = $.extend(Panda.Ui.Forms.SwitchButton || {}, {
         init: function () {
             $(document).off('switch.on', '.uiSwitchButtonForm');
             $(document).on('switch.on', '.uiSwitchButtonForm', function (ev) {
                 // Activate switch
-                jqSwitch = $(this).find('.sbf');
+                var jqSwitch = $(this).find('.sbf');
                 Panda.Ui.Forms.Controls.SwitchButton.activate(jqSwitch);
 
                 // Notify for content modified
@@ -24,7 +16,7 @@ Panda.Ui.Forms = Panda.Ui.Forms || {};
             $(document).off('switch.off', '.uiSwitchButtonForm');
             $(document).on('switch.off', '.uiSwitchButtonForm', function (ev) {
                 // Deactivate switch
-                jqSwitch = $(this).find('.sbf');
+                var jqSwitch = $(this).find('.sbf');
                 Panda.Ui.Forms.Controls.SwitchButton.deactivate(jqSwitch);
 
                 // Notify for content modified
@@ -49,5 +41,5 @@ Panda.Ui.Forms = Panda.Ui.Forms || {};
             // Return switch status
             return Panda.Ui.Forms.Controls.SwitchButton.getStatus(jqSwitch);
         }
-    };
+    });
 })(jQuery);

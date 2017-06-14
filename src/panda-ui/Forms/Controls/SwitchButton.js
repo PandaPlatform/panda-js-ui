@@ -1,16 +1,7 @@
-var Panda = Panda || {};
-Panda.Ui = Panda.Ui || {};
-Panda.Ui.Forms = Panda.Ui.Forms || {};
-Panda.Ui.Forms.Controls = Panda.Ui.Forms.Controls || {};
-
 (function ($) {
-    // Initialize
-    $(document).one('ready', function () {
-        // Initialize Switch Button
-        Panda.Ui.Forms.Controls.SwitchButton.init();
-    });
+    'use strict';
 
-    Panda.Ui.Forms.Controls.SwitchButton = {
+    Panda.Ui.Forms.Controls.SwitchButton = $.extend(Panda.Ui.Forms.Controls.SwitchButton || {}, {
         init: function () {
             $(document).off('click', '.uiSwitchButton');
             $(document).on('click', '.uiSwitchButton', function (ev) {
@@ -18,17 +9,19 @@ Panda.Ui.Forms.Controls = Panda.Ui.Forms.Controls || {};
                 var jqSwitch = $(this);
 
                 // Toggle on-off class
-                if (jqSwitch.hasClass('loading'))
+                if (jqSwitch.hasClass('loading')) {
                     jqSwitch.toggleClass('on');
+                }
 
                 // Initiate loading status
                 jqSwitch.addClass('loading');
 
                 // Set checkbutton
-                if (jqSwitch.hasClass('on'))
+                if (jqSwitch.hasClass('on')) {
                     jqSwitch.find('.swt_chk').prop('checked', false);
-                else
+                } else {
                     jqSwitch.find('.swt_chk').prop('checked', true);
+                }
             });
         },
         getStatus: function (jqSwitch) {
@@ -50,5 +43,5 @@ Panda.Ui.Forms.Controls = Panda.Ui.Forms.Controls || {};
             // Set checkbox value for next submit
             jqSwitch.find('.swt_chk').prop('checked', false);
         }
-    };
+    });
 })(jQuery);
