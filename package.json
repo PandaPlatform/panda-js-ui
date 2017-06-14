@@ -1,0 +1,20 @@
+{
+  "name": "esat-integration-retail",
+  "version": "1.0.0",
+  "description": "Integration - Retail Market",
+  "repository": "https://bitbucket.org/esatisfaction/esat-retail-integration",
+  "author": "e-satisfaction SA",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/esatisfaction/esat-integration-retail#readme",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2",
+    "jquery-bar-rating": "^1.2.2",
+    "jshint": "^2.9.4"
+  }
+}
