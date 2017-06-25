@@ -9,6 +9,44 @@
     var rename = require('gulp-rename');
     var cleanCSS = require('gulp-clean-css');
 
+    // Initialize Panda Ui Libraries
+    var panda = [
+        // Panda Ui
+        'src/Panda/Ui.js',
+
+        // DOM / HTML packages
+        'src/Panda/Ui/DOM.js',
+        'src/Panda/Ui/HTML.js',
+        'src/Panda/Ui/HTML/Weblink.js',
+        'src/Panda/Ui/HTML/HTMLFrame.js',
+
+        // Common packages
+        'src/Panda/Ui/DataTable.js',
+        'src/Panda/Ui/Navigation.js',
+        'src/Panda/Ui/Notification.js',
+        'src/Panda/Ui/PageNotification.js',
+        'src/Panda/Ui/Popup.js',
+        'src/Panda/Ui/Scrollable.js',
+        'src/Panda/Ui/Tooltip.js',
+        'src/Panda/Ui/WindowFrame.js',
+
+        // Form package
+        'src/Panda/Ui/Forms.js',
+        'src/Panda/Ui/Forms/SwitchButton.js',
+
+        // Form Control package
+        'src/Panda/Ui/Forms/Controls.js',
+        'src/Panda/Ui/Forms/Controls/FromElement.js',
+        'src/Panda/Ui/Forms/Controls/FormButton.js',
+        'src/Panda/Ui/Forms/Controls/FormInput.js',
+        'src/Panda/Ui/Forms/Controls/FormLabel.js',
+        'src/Panda/Ui/Forms/Controls/SwitchButton.js',
+
+        // Main files
+        'src/Panda/Init.js'
+    ];
+    var version = '1.1.1';
+
     // Set default gulp task
     gulp.task('default', ['build']);
 
@@ -42,41 +80,8 @@
         del('./dist/*.min.js');
 
         // Minimum files
-        return gulp.src([
-            // Panda Ui
-            'src/panda/Ui.js',
-
-            // DOM / HTML modules
-            'src/panda/DOM.js',
-            'src/panda/HTML/Weblink.js',
-            'src/panda/HTML/HTMLFrame.js',
-
-            // Common modules
-            'src/panda/DataTable.js',
-            'src/panda/Navigation.js',
-            'src/panda/Notification.js',
-            'src/panda/PageNotification.js',
-            'src/panda/Popup.js',
-            'src/panda/Scrollable.js',
-            'src/panda/Tooltip.js',
-            'src/panda/WindowFrame.js',
-
-            // Form module
-            'src/panda/Forms.js',
-            'src/panda/Forms/SwitchButton.js',
-
-            // Form Control module
-            'src/panda/Forms/Controls.js',
-            'src/panda/Forms/Controls/FromElement.js',
-            'src/panda/Forms/Controls/FormButton.js',
-            'src/panda/Forms/Controls/FormInput.js',
-            'src/panda/Forms/Controls/FormLabel.js',
-            'src/panda/Forms/Controls/SwitchButton.js',
-
-            // Main files
-            'src/panda/Init.js'
-        ])
-            .pipe(concat('panda.ui-1.1.js'))
+        return gulp.src(panda)
+            .pipe(concat('panda.ui-' + version + '.js'))
             .pipe(gulp.dest('./dist/js/'));
     });
 
@@ -86,44 +91,8 @@
         del('./dist/*.min.js');
 
         // Minimum files
-        return gulp.src([
-            // jQuery
-            'src/jquery/jquery-2.2.4.js',
-
-            // Panda Ui
-            'src/panda/Ui.js',
-
-            // DOM / HTML modules
-            'src/panda/DOM.js',
-            'src/panda/HTML/Weblink.js',
-            'src/panda/HTML/HTMLFrame.js',
-
-            // Common modules
-            'src/panda/DataTable.js',
-            'src/panda/Navigation.js',
-            'src/panda/Notification.js',
-            'src/panda/PageNotification.js',
-            'src/panda/Popup.js',
-            'src/panda/Scrollable.js',
-            'src/panda/Tooltip.js',
-            'src/panda/WindowFrame.js',
-
-            // Form module
-            'src/panda/Forms.js',
-            'src/panda/Forms/SwitchButton.js',
-
-            // Form Control module
-            'src/panda/Forms/Controls.js',
-            'src/panda/Forms/Controls/FromElement.js',
-            'src/panda/Forms/Controls/FormButton.js',
-            'src/panda/Forms/Controls/FormInput.js',
-            'src/panda/Forms/Controls/FormLabel.js',
-            'src/panda/Forms/Controls/SwitchButton.js',
-
-            // Main files
-            'src/panda/Init.js'
-        ])
-            .pipe(concat('panda.ui-1.1.jq.js'))
+        return gulp.src(['src/jquery/jquery-2.2.4.js'].concat(panda))
+            .pipe(concat('panda.ui-' + version + '.jq.js'))
             .pipe(gulp.dest('./dist/js/'));
     });
 

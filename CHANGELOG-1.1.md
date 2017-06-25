@@ -11,3 +11,6 @@ XXX is the change hash
   * [dev-ops] Automate build using gulp
   * [code] Improve code structure
   * [code] Allow extension of Panda Ui Libraries
+* 1.1.1 (2017-06-26)
+  * [code] Fix: Add HTML.js to initialize HTML package
+  * [code] (internal) Add Ui folder to match the library code structure

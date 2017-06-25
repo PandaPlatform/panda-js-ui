@@ -7,13 +7,12 @@
  * https://pandaphp.org/js/license
  */
 var Panda = Panda || {};
-Panda.Ui = Panda.Ui || {};
 
 (function ($) {
     'use strict';
 
     Panda.Ui = $.extend(Panda.Ui || {}, {
-        version: '1.1.0',
+        version: '1.1.1',
         init: function () {
             // Initialize Panda Ui Libraries
             Panda.Ui.DataTable.init();

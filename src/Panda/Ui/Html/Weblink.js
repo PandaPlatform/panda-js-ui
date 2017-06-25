@@ -1,7 +1,7 @@
 (function ($) {
     'use strict';
 
-    Panda.Ui.Weblink = $.extend(Panda.Ui.Weblink || {}, {
+    Panda.Ui.HTML.Weblink = $.extend(Panda.Ui.HTML.Weblink || {}, {
         create: function (href, target, content, linkClass) {
             // Create item object
             var link = Panda.Ui.DOM.create('a', content, '', linkClass);
@@ -10,7 +10,7 @@
             link.attr('href', href);
             link.attr('target', target);
 
-            // Return weblink
+            // Return web link
             return link;
         }
     });

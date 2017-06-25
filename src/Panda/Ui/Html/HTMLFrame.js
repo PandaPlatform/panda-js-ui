@@ -1,7 +1,7 @@
 (function ($) {
     'use strict';
 
-    Panda.Ui.HTMLFrame = $.extend(Panda.Ui.HTMLFrame || {}, {
+    Panda.Ui.HTML.HTMLFrame = $.extend(Panda.Ui.HTML.HTMLFrame || {}, {
         create: function (src, name, id, frameClass, sandbox) {
             // Create item object
             var frameItem = Panda.Ui.DOM.create('iframe', '', id, frameClass);
