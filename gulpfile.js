@@ -44,37 +44,37 @@
         // Minimum files
         return gulp.src([
             // Panda Ui
-            'src/panda-ui/Ui.js',
+            'src/panda/Ui.js',
 
             // DOM / HTML modules
-            'src/panda-ui/DOM.js',
-            'src/panda-ui/HTML/Weblink.js',
-            'src/panda-ui/HTML/HTMLFrame.js',
+            'src/panda/DOM.js',
+            'src/panda/HTML/Weblink.js',
+            'src/panda/HTML/HTMLFrame.js',
 
             // Common modules
-            'src/panda-ui/DataTable.js',
-            'src/panda-ui/Navigation.js',
-            'src/panda-ui/Notification.js',
-            'src/panda-ui/PageNotification.js',
-            'src/panda-ui/Popup.js',
-            'src/panda-ui/Scrollable.js',
-            'src/panda-ui/Tooltip.js',
-            'src/panda-ui/WindowFrame.js',
+            'src/panda/DataTable.js',
+            'src/panda/Navigation.js',
+            'src/panda/Notification.js',
+            'src/panda/PageNotification.js',
+            'src/panda/Popup.js',
+            'src/panda/Scrollable.js',
+            'src/panda/Tooltip.js',
+            'src/panda/WindowFrame.js',
 
             // Form module
-            'src/panda-ui/Forms.js',
-            'src/panda-ui/Forms/SwitchButton.js',
+            'src/panda/Forms.js',
+            'src/panda/Forms/SwitchButton.js',
 
             // Form Control module
-            'src/panda-ui/Forms/Controls.js',
-            'src/panda-ui/Forms/Controls/FromElement.js',
-            'src/panda-ui/Forms/Controls/FormButton.js',
-            'src/panda-ui/Forms/Controls/FormInput.js',
-            'src/panda-ui/Forms/Controls/FormLabel.js',
-            'src/panda-ui/Forms/Controls/SwitchButton.js',
+            'src/panda/Forms/Controls.js',
+            'src/panda/Forms/Controls/FromElement.js',
+            'src/panda/Forms/Controls/FormButton.js',
+            'src/panda/Forms/Controls/FormInput.js',
+            'src/panda/Forms/Controls/FormLabel.js',
+            'src/panda/Forms/Controls/SwitchButton.js',
 
             // Main files
-            'src/panda-ui/Init.js'
+            'src/panda/Init.js'
         ])
             .pipe(concat('panda.ui-1.1.js'))
             .pipe(gulp.dest('./dist/js/'));
@@ -91,37 +91,37 @@
             'src/jquery/jquery-2.2.4.js',
 
             // Panda Ui
-            'src/panda-ui/Ui.js',
+            'src/panda/Ui.js',
 
             // DOM / HTML modules
-            'src/panda-ui/DOM.js',
-            'src/panda-ui/HTML/Weblink.js',
-            'src/panda-ui/HTML/HTMLFrame.js',
+            'src/panda/DOM.js',
+            'src/panda/HTML/Weblink.js',
+            'src/panda/HTML/HTMLFrame.js',
 
             // Common modules
-            'src/panda-ui/DataTable.js',
-            'src/panda-ui/Navigation.js',
-            'src/panda-ui/Notification.js',
-            'src/panda-ui/PageNotification.js',
-            'src/panda-ui/Popup.js',
-            'src/panda-ui/Scrollable.js',
-            'src/panda-ui/Tooltip.js',
-            'src/panda-ui/WindowFrame.js',
+            'src/panda/DataTable.js',
+            'src/panda/Navigation.js',
+            'src/panda/Notification.js',
+            'src/panda/PageNotification.js',
+            'src/panda/Popup.js',
+            'src/panda/Scrollable.js',
+            'src/panda/Tooltip.js',
+            'src/panda/WindowFrame.js',
 
             // Form module
-            'src/panda-ui/Forms.js',
-            'src/panda-ui/Forms/SwitchButton.js',
+            'src/panda/Forms.js',
+            'src/panda/Forms/SwitchButton.js',
 
             // Form Control module
-            'src/panda-ui/Forms/Controls.js',
-            'src/panda-ui/Forms/Controls/FromElement.js',
-            'src/panda-ui/Forms/Controls/FormButton.js',
-            'src/panda-ui/Forms/Controls/FormInput.js',
-            'src/panda-ui/Forms/Controls/FormLabel.js',
-            'src/panda-ui/Forms/Controls/SwitchButton.js',
+            'src/panda/Forms/Controls.js',
+            'src/panda/Forms/Controls/FromElement.js',
+            'src/panda/Forms/Controls/FormButton.js',
+            'src/panda/Forms/Controls/FormInput.js',
+            'src/panda/Forms/Controls/FormLabel.js',
+            'src/panda/Forms/Controls/SwitchButton.js',
 
             // Main files
-            'src/panda-ui/Init.js'
+            'src/panda/Init.js'
         ])
             .pipe(concat('panda.ui-1.1.jq.js'))
             .pipe(gulp.dest('./dist/js/'));
