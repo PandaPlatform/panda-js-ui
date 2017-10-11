@@ -1,18 +1,18 @@
 /*!
- * Panda Ui JavaScript Library v1.1.0
+ * Panda Ui JavaScript Library v1.1.2
  * https://pandaphp.org
  *
  * Copyright JS Ioannis Papikas
  * Released under the MIT license
  * https://pandaphp.org/js/license
  */
-var Panda = Panda || {};
+var Panda = window.Panda || {};
 
 (function ($) {
     'use strict';
 
     Panda.Ui = $.extend(Panda.Ui || {}, {
-        version: '1.1.1',
+        version: '1.1.2',
         init: function () {
             // Initialize Panda Ui Libraries
             Panda.Ui.DataTable.init();

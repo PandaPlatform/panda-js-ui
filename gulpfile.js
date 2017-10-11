@@ -45,7 +45,7 @@
         // Main files
         'src/Panda/Init.js'
     ];
-    var version = '1.1.1';
+    var version = '1.1.2';
 
     // Set default gulp task
     gulp.task('default', ['build']);

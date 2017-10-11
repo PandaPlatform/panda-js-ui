@@ -7,6 +7,8 @@ in all versions (major and minor)
 To get the diff for a specific change, go to https://github.com/PandaPlatform/panda-ui-fe/commit/XXX where
 XXX is the change hash
 
+* 1.1.2 (2017-10-11)
+  * [core] Read Panda from window scope
 * 1.1.1 (2017-06-26)
   * [code] Fix: Add HTML.js to initialize HTML package
   * [code] (internal) Add Ui folder to match the library code structure
