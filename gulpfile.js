@@ -1,6 +1,6 @@
-'use strict';
-
 (function () {
+    'use strict';
+
     // Initialize variables
     var gulp = require('gulp');
     var del = require('del');
@@ -10,6 +10,7 @@
     var cleanCSS = require('gulp-clean-css');
 
     // Initialize Panda Ui Libraries
+    var version = '2.0.0';
     var panda = [
         // Panda Ui
         'src/Panda/Ui.js',
@@ -20,19 +21,8 @@
         'src/Panda/Ui/HTML/Weblink.js',
         'src/Panda/Ui/HTML/HTMLFrame.js',
 
-        // Common packages
-        'src/Panda/Ui/DataTable.js',
-        'src/Panda/Ui/Navigation.js',
-        'src/Panda/Ui/Notification.js',
-        'src/Panda/Ui/PageNotification.js',
-        'src/Panda/Ui/Popup.js',
-        'src/Panda/Ui/Scrollable.js',
-        'src/Panda/Ui/Tooltip.js',
-        'src/Panda/Ui/WindowFrame.js',
-
         // Form package
         'src/Panda/Ui/Forms.js',
-        'src/Panda/Ui/Forms/SwitchButton.js',
 
         // Form Control package
         'src/Panda/Ui/Forms/Controls.js',
@@ -40,12 +30,10 @@
         'src/Panda/Ui/Forms/Controls/FormButton.js',
         'src/Panda/Ui/Forms/Controls/FormInput.js',
         'src/Panda/Ui/Forms/Controls/FormLabel.js',
-        'src/Panda/Ui/Forms/Controls/SwitchButton.js',
 
         // Main files
         'src/Panda/Init.js'
     ];
-    var version = '1.1.1';
 
     // Set default gulp task
     gulp.task('default', ['build']);
