@@ -1,19 +1,25 @@
 (function ($) {
     'use strict';
 
+    /**
+     * FormButton Service
+     */
     Panda.Ui.Forms.Controls.FormButton = $.extend(Panda.Ui.Forms.Controls.FormButton || {}, {
-        create: function (title, type, id, name, positive) {
+        /**
+         * Creates a <button> HTMLElement
+         *
+         * @param {string} title
+         * @param {string} type
+         * @param {string} id
+         * @param {string} name
+         *
+         * @return {tag}
+         */
+        create: function (title, type, id, name) {
             // Create button item
-            var button = Panda.Ui.Forms.Controls.FormElement.create('button', name, id, '', 'uiFormButton').html(title);
-
-            // Add extra attributes
-            button.attr('type', type);
-            if (positive) {
-                button.addClass('positive');
-            }
-
-            // Return item
-            return button;
+            return Panda.Ui.Forms.Controls.FormElement.create('button', name, '', id, 'panda-form-button')
+                .html(title)
+                .attr('type', type);
         }
     });
 })(jQuery);

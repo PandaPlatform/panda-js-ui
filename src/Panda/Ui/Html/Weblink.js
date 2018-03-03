@@ -1,17 +1,26 @@
 (function ($) {
     'use strict';
 
+    /**
+     * Weblink Service
+     */
     Panda.Ui.HTML.Weblink = $.extend(Panda.Ui.HTML.Weblink || {}, {
-        create: function (href, target, content, linkClass) {
+        /**
+         * Create a <a> HTMLElement
+         *
+         * @param {string} href
+         * @param {string} target
+         * @param {string} content
+         * @param {string} id
+         * @param {string} linkClass
+         *
+         * @return {tag}
+         */
+        create: function (href, target, content, id, linkClass) {
             // Create item object
-            var link = Panda.Ui.DOM.create('a', content, '', linkClass);
-
-            // Add href and target
-            link.attr('href', href);
-            link.attr('target', target);
-
-            // Return web link
-            return link;
+            return Panda.Ui.DOM.create('a', content, id, linkClass)
+                .attr('href', href)
+                .attr('target', target);
         }
     });
 })(jQuery);

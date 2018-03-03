@@ -1,19 +1,26 @@
 (function ($) {
     'use strict';
 
+    /**
+     * Main DOM Service
+     */
     Panda.Ui.DOM = $.extend(Panda.Ui.DOM || {}, {
-        create: function (tag, context, id, itemClass) {
+        /**
+         * Create a simple DOM/HTMLElement
+         *
+         * @param {string} tag
+         * @param {string} content
+         * @param {string} id
+         * @param {string} itemClass
+         *
+         * @return {tag}
+         */
+        create: function (tag, content, id, itemClass) {
             // Create DOMElement object
-            var domElement = $('<' + tag + '/>').html(context);
-            if (id !== '') {
-                domElement.attr('id', id);
-            }
-
-            if (itemClass !== '') {
-                domElement.addClass(itemClass);
-            }
-
-            return domElement;
+            return $('<' + tag + '/>')
+                .html(content)
+                .attr('id', id)
+                .addClass(itemClass);
         }
     });
 })(jQuery);

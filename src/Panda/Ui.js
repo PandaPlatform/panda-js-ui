@@ -11,15 +11,13 @@ var Panda = Panda || {};
 (function ($) {
     'use strict';
 
+    /**
+     * Panda Ui Base Service
+     */
     Panda.Ui = $.extend(Panda.Ui || {}, {
-        version: '1.1.1',
+        version: '2.0.0',
         init: function () {
             // Initialize Panda Ui Libraries
-            Panda.Ui.DataTable.init();
-            Panda.Ui.Navigation.init();
-            Panda.Ui.Notification.init();
-            Panda.Ui.Tooltip.init();
-            Panda.Ui.WindowFrame.init();
             Panda.Ui.Forms.init();
         }
     });

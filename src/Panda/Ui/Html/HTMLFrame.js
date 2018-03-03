@@ -1,18 +1,27 @@
 (function ($) {
     'use strict';
 
+    /**
+     * HTMLFrame Service (iframe)
+     */
     Panda.Ui.HTML.HTMLFrame = $.extend(Panda.Ui.HTML.HTMLFrame || {}, {
+        /**
+         * Create an <iframe> HTMLElement
+         *
+         * @param {string} src
+         * @param {string} name
+         * @param {string} id
+         * @param {string} frameClass
+         * @param {boolean} sandbox
+         *
+         * @return {tag}
+         */
         create: function (src, name, id, frameClass, sandbox) {
             // Create item object
-            var frameItem = Panda.Ui.DOM.create('iframe', '', id, frameClass);
-
-            // Add source, name and sandbox
-            frameItem.attr('name', name);
-            frameItem.attr('src', src);
-            frameItem.attr('sandbox', sandbox);
-
-            // Return item
-            return frameItem;
+            return Panda.Ui.DOM.create('iframe', '', id, frameClass)
+                .attr('name', name)
+                .attr('src', src)
+                .attr('sandbox', sandbox);
         }
     });
 })(jQuery);

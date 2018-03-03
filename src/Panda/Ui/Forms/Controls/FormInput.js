@@ -1,25 +1,34 @@
 (function ($) {
     'use strict';
 
+    /**
+     * FormInput Service
+     */
     Panda.Ui.Forms.Controls.FormInput = $.extend(Panda.Ui.Forms.Controls.FormInput || {}, {
-        create: function (type, name, id, value, required) {
+        /**
+         * Create a <input> HTMLElement, providing all the proper attributes
+         *
+         * @param {string} type
+         * @param {string} name
+         * @param {string} value
+         * @param {string} id
+         * @param {boolean} required
+         *
+         * @return {tag}
+         */
+        create: function (type, name, value, id, required) {
             // Check if input is radio or checkbox
             var checked = false;
-            if (type === 'checkbox' && jq.type(value) === 'boolean') {
+            if ((type === 'checkbox' || type === 'radio') && jq.type(value) === 'boolean') {
                 checked = (value === true);
                 value = '';
             }
 
             // Create input item
-            var input = Panda.Ui.Forms.Controls.FormElement.create('input', name, id, value, 'uiFormInput');
-
-            // Add extra attributes
-            input.attr('type', type);
-            input.attr('checked', checked);
-            input.attr('required', required);
-
-            // Return item
-            return input;
+            return Panda.Ui.Forms.Controls.FormElement.create('input', name, value, id, 'panda-form-input')
+                .attr('type', type)
+                .attr('checked', checked)
+                .attr('required', required);
         }
     });
 })(jQuery);
