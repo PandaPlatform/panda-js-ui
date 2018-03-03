@@ -1,5 +1,6 @@
 # npm folders
 node_modules
+package-lock.json
 
 # Distribution folder
 dist
